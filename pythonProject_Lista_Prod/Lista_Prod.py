@@ -91,7 +91,7 @@ def removerProduto():
 #--------------- FIM REMOVER PRODUTO ----------
 
 #------------ COMEÇO MAIN -------------------
-print('Bem Vindo ao Controle de Estoque de produtos da Beatriz')
+print('Bem Vindo ao Controle de Estoque de produtos da empresa X')
 registroProduto = 0
 while True:
     try:
