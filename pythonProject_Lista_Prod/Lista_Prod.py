@@ -1,8 +1,3 @@
-import locale
-
-# Define a localidade para o Brasil
-locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
-
 listaProduto = []
 
 #---------- COMEÇO CADASTRAR PRODUTO ----------
@@ -40,8 +35,6 @@ def consultarProduto():
                 print('---------------')
                 for produto in listaProduto:
                     for key, value in produto.items():
-                        if key == 'Valor':
-                            value = locale.currency(value, grouping=True)
                         print('{}: {}'.format(key, value))
                     print('---------------')
             elif opcaoC == 2:
@@ -51,8 +44,6 @@ def consultarProduto():
                 for produto in listaProduto:
                     if produto['Código'] == entrada:
                         for key, value in produto.items():
-                            if key == 'Valor':
-                                value = locale.currency(value, grouping=True)
                             print('{}: {}'.format(key, value))
                         produto_encontrado = True
                         print('---------------')
@@ -65,8 +56,6 @@ def consultarProduto():
                 for produto in listaProduto:
                     if produto['Fabricante'] == entrada:
                         for key, value in produto.items():
-                            if key == 'Valor':
-                                value = locale.currency(value, grouping=True)
                             print('{}: {}'.format(key, value))
                         fabricante_encontrado = True
                         print('---------------')
